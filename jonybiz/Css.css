@@ -1,0 +1,12 @@
+﻿.boja {
+    background-color: deepskyblue;
+    padding:10px;
+    border-radius:5px 5px 5px 5px;
+    width:50%;
+    border:1px dashed white;
+    color:orangered;
+}
+body {
+    background-color:mediumpurple;
+    color:greenyellow;
+}

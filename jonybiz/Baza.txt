@@ -1,0 +1,30 @@
+﻿create table LicniPodaci(
+
+	ID int primary key identity(1,1),
+	PunoIme nvarchar(100),
+	Email nvarchar(100),
+	Telefon nvarchar(100),
+
+)
+
+create table Kursevi(
+
+	ID int primary key identity(1,1),
+	Naziv nvarchar(100),
+	Deskripcija nvarchar(100),
+	Cena int
+	
+)
+
+Create table Checkout(
+
+	ID int primary key identity(1,1),
+	LPID int foreign key references LicniPodaci(ID),
+	KID int foreign key references Kursevi(ID),
+
+)
+
+Insert into Kursevi(Naziv,Deskripcija,Cena) values('Yoga','Uci yogu',150)
+Insert into Kursevi(Naziv,Deskripcija,Cena) values('C#','Uci hackovanje',200)
+Insert into Kursevi(Naziv,Deskripcija,Cena) values('Boxing','Uci da se tuces',120)
+
